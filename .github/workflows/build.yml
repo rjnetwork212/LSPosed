@@ -37,7 +37,7 @@ jobs:
           cd out && zip -r system-enhancer.zip system-enhancer
 
       - name: Upload Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: system-enhancer
           path: out/system-enhancer.zip 
