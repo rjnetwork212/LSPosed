@@ -18,7 +18,7 @@
  * Copyright (C) 2021 - 2022 LSPosed Contributors
  */
 
-package org.lsposed.lspd.core;
+package org.rjnetwork.lspd.core;
 
 import android.app.ActivityThread;
 import android.app.LoadedApk;
@@ -27,17 +27,17 @@ import android.content.res.CompatibilityInfo;
 
 import com.android.internal.os.ZygoteInit;
 
-import org.lsposed.lspd.deopt.PrebuiltMethodsDeopter;
-import org.lsposed.lspd.hooker.AttachHooker;
-import org.lsposed.lspd.hooker.CrashDumpHooker;
-import org.lsposed.lspd.hooker.HandleSystemServerProcessHooker;
-import org.lsposed.lspd.hooker.LoadedApkCtorHooker;
-import org.lsposed.lspd.hooker.LoadedApkCreateCLHooker;
-import org.lsposed.lspd.hooker.OpenDexFileHooker;
-import org.lsposed.lspd.impl.LSPosedContext;
-import org.lsposed.lspd.impl.LSPosedHelper;
-import org.lsposed.lspd.service.ILSPApplicationService;
-import org.lsposed.lspd.util.Utils;
+import org.rjnetwork.lspd.deopt.PrebuiltMethodsDeopter;
+import org.rjnetwork.lspd.hooker.AttachHooker;
+import org.rjnetwork.lspd.hooker.CrashDumpHooker;
+import org.rjnetwork.lspd.hooker.HandleSystemServerProcessHooker;
+import org.rjnetwork.lspd.hooker.LoadedApkCtorHooker;
+import org.rjnetwork.lspd.hooker.LoadedApkCreateCLHooker;
+import org.rjnetwork.lspd.hooker.OpenDexFileHooker;
+import org.rjnetwork.lspd.impl.LSPosedContext;
+import org.rjnetwork.lspd.impl.LSPosedHelper;
+import org.rjnetwork.lspd.service.ILSPApplicationService;
+import org.rjnetwork.lspd.util.Utils;
 
 import java.util.List;
 

@@ -17,7 +17,7 @@
  * Copyright (C) 2021 LSPosed Contributors
  */
 
-package org.lsposed.manager;
+package org.rjnetwork.manager;
 
 import android.content.Intent;
 import android.content.pm.PackageInfo;
@@ -27,11 +27,11 @@ import android.os.ParcelFileDescriptor;
 import android.os.RemoteException;
 import android.util.Log;
 
-import org.lsposed.lspd.ILSPManagerService;
-import org.lsposed.lspd.models.Application;
-import org.lsposed.lspd.models.UserInfo;
-import org.lsposed.manager.adapters.ScopeAdapter;
-import org.lsposed.manager.receivers.LSPManagerServiceHolder;
+import org.rjnetwork.lspd.ILSPManagerService;
+import org.rjnetwork.lspd.models.Application;
+import org.rjnetwork.lspd.models.UserInfo;
+import org.rjnetwork.manager.adapters.ScopeAdapter;
+import org.rjnetwork.manager.receivers.LSPManagerServiceHolder;
 
 import java.io.File;
 import java.util.ArrayList;

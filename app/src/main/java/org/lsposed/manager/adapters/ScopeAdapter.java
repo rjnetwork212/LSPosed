@@ -18,7 +18,7 @@
  * Copyright (C) 2021 LSPosed Contributors
  */
 
-package org.lsposed.manager.adapters;
+package org.rjnetwork.manager.adapters;
 
 import static android.provider.Settings.ACTION_APPLICATION_DETAILS_SETTINGS;
 
@@ -62,19 +62,19 @@ import com.bumptech.glide.request.target.CustomTarget;
 import com.bumptech.glide.request.transition.Transition;
 import com.google.android.material.checkbox.MaterialCheckBox;
 
-import org.lsposed.lspd.models.Application;
-import org.lsposed.manager.App;
-import org.lsposed.manager.BuildConfig;
-import org.lsposed.manager.ConfigManager;
-import org.lsposed.manager.R;
-import org.lsposed.manager.databinding.ItemMasterSwitchBinding;
-import org.lsposed.manager.databinding.ItemModuleBinding;
-import org.lsposed.manager.ui.dialog.BlurBehindDialogBuilder;
-import org.lsposed.manager.ui.fragment.AppListFragment;
-import org.lsposed.manager.ui.fragment.CompileDialogFragment;
-import org.lsposed.manager.ui.widget.EmptyStateRecyclerView;
-import org.lsposed.manager.util.GlideApp;
-import org.lsposed.manager.util.ModuleUtil;
+import org.rjnetwork.lspd.models.Application;
+import org.rjnetwork.manager.App;
+import org.rjnetwork.manager.BuildConfig;
+import org.rjnetwork.manager.ConfigManager;
+import org.rjnetwork.manager.R;
+import org.rjnetwork.manager.databinding.ItemMasterSwitchBinding;
+import org.rjnetwork.manager.databinding.ItemModuleBinding;
+import org.rjnetwork.manager.ui.dialog.BlurBehindDialogBuilder;
+import org.rjnetwork.manager.ui.fragment.AppListFragment;
+import org.rjnetwork.manager.ui.fragment.CompileDialogFragment;
+import org.rjnetwork.manager.ui.widget.EmptyStateRecyclerView;
+import org.rjnetwork.manager.util.GlideApp;
+import org.rjnetwork.manager.util.ModuleUtil;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;

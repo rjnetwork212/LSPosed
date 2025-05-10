@@ -17,14 +17,14 @@
  * Copyright (C) 2021 LSPosed Contributors
  */
 
-package org.lsposed.manager.receivers;
+package org.rjnetwork.manager.receivers;
 
 import android.os.IBinder;
 import android.os.Process;
 import android.os.RemoteException;
 import android.system.Os;
 
-import org.lsposed.lspd.ILSPManagerService;
+import org.rjnetwork.lspd.ILSPManagerService;
 
 public class LSPManagerServiceHolder implements IBinder.DeathRecipient {
     private static LSPManagerServiceHolder holder = null;

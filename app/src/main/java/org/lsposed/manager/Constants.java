@@ -18,11 +18,11 @@
  * Copyright (C) 2021 LSPosed Contributors
  */
 
-package org.lsposed.manager;
+package org.rjnetwork.manager;
 
 import android.os.IBinder;
 
-import org.lsposed.manager.receivers.LSPManagerServiceHolder;
+import org.rjnetwork.manager.receivers.LSPManagerServiceHolder;
 
 public class Constants {
     public static boolean setBinder(IBinder binder) {

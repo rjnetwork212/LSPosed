@@ -18,7 +18,7 @@
  * Copyright (C) 2021 LSPosed Contributors
  */
 
-package org.lsposed.manager;
+package org.rjnetwork.manager;
 
 import android.app.ActivityManager;
 import android.app.Application;
@@ -43,15 +43,15 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.preference.PreferenceManager;
 
-import org.lsposed.hiddenapibypass.HiddenApiBypass;
-import org.lsposed.manager.adapters.AppHelper;
-import org.lsposed.manager.receivers.LSPManagerServiceHolder;
-import org.lsposed.manager.repo.RepoLoader;
-import org.lsposed.manager.util.CloudflareDNS;
-import org.lsposed.manager.util.ModuleUtil;
-import org.lsposed.manager.util.Telemetry;
-import org.lsposed.manager.util.ThemeUtil;
-import org.lsposed.manager.util.UpdateUtil;
+import org.rjnetwork.hiddenapibypass.HiddenApiBypass;
+import org.rjnetwork.manager.adapters.AppHelper;
+import org.rjnetwork.manager.receivers.LSPManagerServiceHolder;
+import org.rjnetwork.manager.repo.RepoLoader;
+import org.rjnetwork.manager.util.CloudflareDNS;
+import org.rjnetwork.manager.util.ModuleUtil;
+import org.rjnetwork.manager.util.Telemetry;
+import org.rjnetwork.manager.util.ThemeUtil;
+import org.rjnetwork.manager.util.UpdateUtil;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -108,7 +108,7 @@ public class App extends Application {
         });
     }
 
-    public static final String TAG = "LSPosedManager";
+    public static final String TAG = "RJNetworkManager";
     private static final String ACTION_USER_ADDED = "android.intent.action.USER_ADDED";
     private static final String ACTION_USER_REMOVED = "android.intent.action.USER_REMOVED";
     private static final String ACTION_USER_INFO_CHANGED = "android.intent.action.USER_INFO_CHANGED";
@@ -178,7 +178,7 @@ public class App extends Application {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
                 var table = MediaStore.Downloads.getContentUri(MediaStore.VOLUME_EXTERNAL_PRIMARY);
                 var values = new ContentValues();
-                values.put(MediaStore.Downloads.DISPLAY_NAME, "LSPosed_crash_report" + time.toEpochSecond() + ".zip");
+                values.put(MediaStore.Downloads.DISPLAY_NAME, "RJNetwork_crash_report" + time.toEpochSecond() + ".zip");
                 values.put(MediaStore.Downloads.RELATIVE_PATH, Environment.DIRECTORY_DOCUMENTS);
                 var cr = getContentResolver();
                 var uri = cr.insert(table, values);
@@ -219,7 +219,7 @@ public class App extends Application {
         res.updateConfiguration(config, res.getDisplayMetrics());
 
         IntentFilter intentFilter = new IntentFilter();
-        intentFilter.addAction("org.lsposed.manager.NOTIFICATION");
+        intentFilter.addAction("org.rjnetwork.manager.NOTIFICATION");
         registerReceiver(new BroadcastReceiver() {
             @Override
             public void onReceive(Context context, Intent inIntent) {

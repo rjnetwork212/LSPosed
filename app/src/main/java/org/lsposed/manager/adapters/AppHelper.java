@@ -18,7 +18,7 @@
  * Copyright (C) 2021 LSPosed Contributors
  */
 
-package org.lsposed.manager.adapters;
+package org.rjnetwork.manager.adapters;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -30,8 +30,8 @@ import android.content.pm.ResolveInfo;
 import android.os.Parcel;
 import android.view.MenuItem;
 
-import org.lsposed.manager.ConfigManager;
-import org.lsposed.manager.R;
+import org.rjnetwork.manager.ConfigManager;
+import org.rjnetwork.manager.R;
 
 import java.util.Collections;
 import java.util.Comparator;

@@ -82,7 +82,7 @@ android {
 autoResConfig {
     generateClass = true
     generateRes = false
-    generatedClassFullName = "org.lsposed.manager.util.LangList"
+    generatedClassFullName = "org.rjnetwork.manager.util.LangList"
     generatedArrayFirstItem = "SYSTEM"
 }
 
