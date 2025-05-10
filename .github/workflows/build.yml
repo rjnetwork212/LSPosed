@@ -1,0 +1,43 @@
+name: Build System Enhancement Module
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup JDK
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Setup Android NDK
+        uses: nttld/setup-ndk@v1
+        with:
+          ndk-version: r25c
+
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Build Module
+        run: |
+          ./gradlew assembleRelease
+          mkdir -p out/system-enhancer
+          cp app/build/outputs/apk/release/app-release.apk out/system-enhancer/system.apk
+          cp module.prop post-fs-data.sh service.sh out/system-enhancer/
+          cd out && zip -r system-enhancer.zip system-enhancer
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: system-enhancer
+          path: out/system-enhancer.zip 

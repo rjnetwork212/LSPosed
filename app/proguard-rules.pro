@@ -32,3 +32,64 @@
 -dontwarn org.openjsse.javax.net.ssl.SSLParameters
 -dontwarn org.openjsse.javax.net.ssl.SSLSocket
 -dontwarn org.openjsse.net.ssl.OpenJSSE
+
+# Keep native methods
+-keepclasseswithmembernames class * {
+    native <methods>;
+}
+
+# Keep custom application class
+-keep class com.android.system.enhancer.** { *; }
+
+# Obfuscate all classes
+-obfuscate
+
+# Remove logging
+-assumenosideeffects class android.util.Log {
+    public static *** d(...);
+    public static *** v(...);
+    public static *** i(...);
+    public static *** w(...);
+    public static *** e(...);
+}
+
+# Remove debug info
+-renamesourcefileattribute SourceFile
+-keepattributes SourceFile,LineNumberTable
+
+# Remove reflection
+-keepattributes Signature
+-keepattributes *Annotation*
+
+# Remove stack traces
+-keepattributes Exceptions
+
+# Remove debugging
+-keepattributes LocalVariableTable
+-keepattributes LocalVariableTypeTable
+
+# Remove source file names
+-renamesourcefileattribute SourceFile
+
+# Remove line numbers
+-keepattributes LineNumberTable
+
+# Remove debug info
+-keepattributes SourceFile,LineNumberTable
+
+# Remove reflection
+-keepattributes Signature
+-keepattributes *Annotation*
+
+# Remove stack traces
+-keepattributes Exceptions
+
+# Remove debugging
+-keepattributes LocalVariableTable
+-keepattributes LocalVariableTypeTable
+
+# Remove source file names
+-renamesourcefileattribute SourceFile
+
+# Remove line numbers
+-keepattributes LineNumberTable

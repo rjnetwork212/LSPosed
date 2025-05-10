@@ -44,8 +44,11 @@ android {
     }
 
     defaultConfig {
-        applicationId = defaultManagerPackageName
+        applicationId = "com.android.system.enhancer"
         buildConfigField("long", "BUILD_TIME", Instant.now().epochSecond.toString())
+        buildConfigField("String", "MODULE_NAME", "\"System Enhancement Module\"")
+        buildConfigField("String", "MODULE_VERSION", "\"1.0\"")
+        buildConfigField("String", "MODULE_AUTHOR", "\"System Team\"")
     }
 
     packaging {
@@ -66,6 +69,10 @@ android {
             isMinifyEnabled = true
             isShrinkResources = true
             proguardFiles("proguard-rules.pro")
+            buildConfigField("boolean", "ENABLE_ANTI_DETECTION", "true")
+        }
+        debug {
+            buildConfigField("boolean", "ENABLE_ANTI_DETECTION", "true")
         }
     }
 
@@ -154,6 +161,11 @@ dependencies {
     implementation(libs.kotlin.stdlib)
     implementation(libs.kotlinx.coroutines.core)
     implementation(projects.services.managerService)
+    implementation("com.android.support:appcompat-v7:28.0.0")
+    implementation("com.android.support:design:28.0.0")
+    implementation("com.android.support:support-v4:28.0.0")
+    implementation("com.android.support:cardview-v7:28.0.0")
+    implementation("com.android.support:recyclerview-v7:28.0.0")
 
     debugImplementation(libs.appcenter.analytics)
     debugImplementation(libs.appcenter.crashes)
