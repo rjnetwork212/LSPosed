@@ -1,4 +1,4 @@
-name: Build System Enhancement Module
+name: Build Add System Enhancement Module
 
 on:
   push:
@@ -40,4 +40,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: system-enhancer
-          path: out/system-enhancer.zip 
+          path: out/system-enhancer.zip
